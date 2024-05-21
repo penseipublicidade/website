@@ -51,6 +51,12 @@ ft.app(target=main)
 
 Whether to enable autocorrection. Default is `True`.
 
+### `autofill_hints`
+
+Helps the autofill service identify the type of this text input. Value can either be a single [`AutoFillHint`](/docs/reference/types/autofillhint) enum item or a list of them.
+
+More information [here](https://api.flutter.dev/flutter/cupertino/CupertinoTextField/autofillHints.html).
+
 ### `autofocus`
 
 True if the control will be selected as the initial focus. If there is more than one control on a page with autofocus set, then the first one added to the page will get focus.
