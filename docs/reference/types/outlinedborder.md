@@ -16,7 +16,7 @@ import TabItem from '@theme/TabItem';
   * `ContinuousRectangleBorder`
     * `radius` - border radius, an instance of `BorderRadius` class or a number.
 
-### Example of usage
+### Usage example
 
 ```python
 import flet as ft

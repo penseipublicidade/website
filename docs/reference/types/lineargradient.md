@@ -19,7 +19,7 @@ More information:
 * [Linear gradient](https://api.flutter.dev/flutter/painting/LinearGradient-class.html) in Flutter documentation.
 * [Radian measuring unit](https://en.wikipedia.org/wiki/Radian) on Wikipedia.
 
-### Example of usage
+### Usage example
 
 <img src="/img/docs/controls/container/linear-gradient.png" className="screenshot-20" />
 

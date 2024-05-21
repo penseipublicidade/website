@@ -13,7 +13,7 @@ import TabItem from '@theme/TabItem';
 * `STRETCH`
 * `BASELINE`
 
-### Example of usage
+### Usage example
 
 <img src="/img/docs/controls/column/column-horiz-alignment.png"  className="screenshot-50" />
 

@@ -16,7 +16,7 @@ More information:
 
 * [Sweep gradient](https://api.flutter.dev/flutter/painting/SweepGradient-class.html) in Flutter documentation.
 
-### Example of usage
+### Usage example
 
 <img src="/img/docs/controls/container/sweep-gradient.png" className="screenshot-20" />
 

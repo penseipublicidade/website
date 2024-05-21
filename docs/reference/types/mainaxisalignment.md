@@ -15,7 +15,7 @@ import TabItem from '@theme/TabItem';
 * `SPACE_AROUND`
 * `SPACE_EVENLY`
 
-### Example of usage
+### Usage example
 
 <img src="/img/docs/controls/column/column-alignment.png"  className="screenshot-70"/>
 

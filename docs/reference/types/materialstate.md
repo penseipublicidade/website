@@ -17,7 +17,7 @@ import TabItem from '@theme/TabItem';
 * `ERROR`
 * `DEFAULT` - fallback state, meaning "all other states".
 
-### Example of usage
+### Usage example
 
 To configure radio fill color for all Material states set `fill_color` value to a literal, for example:
 

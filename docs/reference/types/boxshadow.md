@@ -13,7 +13,7 @@ import TabItem from '@theme/TabItem';
 * `offset` - An instance of `ft.Offset` class - the displacement of the shadow from the casting element. Positive x/y offsets will shift the shadow to the right and down, while negative offsets shift the shadow to the left and up. The offsets are relative to the position of the element that is casting it. Default is `ft.Offset(0,0)`.
 * `blur_style` - The value is [`ShadowBlurStyle`](/docs/reference/types/shadowblurstyle) enum. Defaults to `NORMAL`.
 
-Example:
+### Usage example
 
 ```python
 ft.Container(

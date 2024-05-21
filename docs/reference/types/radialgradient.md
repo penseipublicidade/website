@@ -17,7 +17,7 @@ More information:
 
 * [Radial gradient](https://api.flutter.dev/flutter/painting/RadialGradient-class.html) in Flutter documentation.
 
-### Example of usage
+### Usage example
 
 <img src="/img/docs/controls/container/radial-gradient.png" className="screenshot-20" />
 
