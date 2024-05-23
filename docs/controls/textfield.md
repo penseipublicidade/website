@@ -362,8 +362,9 @@ The name of the icon to show before the input field and outside of the decoratio
 
 ### `input_filter`
 
-Provides as-you-type filtering/validation in your `TextField`. 
-The value is an instance of the [`InputFilter`](/docs/reference/types/inputfilter) class.
+Provides as-you-type filtering/validation. Value is an instance of the [`InputFilter`](/docs/reference/types/inputfilter) class.
+
+Similar to the `on_change` callback, the input filters are not applied when the content of the field is changed programmatically.
 
 ### `keyboard_type`
 

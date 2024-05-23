@@ -215,7 +215,7 @@ The [TextStyle](/docs/reference/types/textstyle) to use for `placeholder_text`.
 
 Optional `Control` to place on the line before the input.
 
-### `prefix_mode`
+### `prefix_visibility_mode`
 
 Defines the visibility of the `prefix` control based on the state of text entry. Has no effect if `prefix` is not specified.
 
@@ -267,7 +267,7 @@ This flag only affects iOS. As an example of what this does, a standard vertical
 
 Optional `Control` to place on the line after the input.
 
-### `suffix_mode`
+### `suffix_visibility_mode`
 
 Defines the visibility of the `suffix` control based on the state of text entry. Has no effect if `suffix` is not specified.
 

@@ -1,46 +1,41 @@
 ---
-title: Paint
-sidebar_label: Paint
+title: PaintSweepGradient
+sidebar_label: PaintSweepGradient
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-A description of the style to use when drawing a shape on the canvas.
+`PaintSweepGradient` class has the following properties:
 
-`Paint` class has the following properties:
+### `center`
 
-### `anti_alias`
+The center of the gradient.
 
-Whether to apply anti-aliasing to lines and images drawn on the canvas. Defaults to `True`.
+### `colors`
 
-### `blend_mode`
+### `end_angle`
 
-A blend mode to apply when a shape is drawn or a layer is composited.
+The angle in radians at which stop 1.0 of the gradient is placed. Defaults to math.pi * 2.
 
-Defaults to `BlendMode.SRC_OVER`.
+### `stops`
 
-Property value is [`BlendMode`](/docs/reference/types/blendmode).
+### `tile_mode`
 
-### `blur_image`
+### `rotation`
 
-Blur image when drawing it on a canvas.
+Gradient rotation in radians.
 
-See [`Container.blur`](/docs/controls/container#blur) for more information.
+### `start_angle`
 
-### `color`
-
-The [color](/docs/reference/colors) to use when stroking or filling a shape. Defaults to opaque black.
-
-### `gradient`
-
-Configures gradient paint. Value is an instance of one of the following classes:
-
-* [`PaintLinearGradient`](/docs/reference/types/paintlineargradient)
-* [`PaintRadialGradient`](/docs/reference/types/paintradialgradient)
-* [`PaintSweepGradient`](/docs/reference/types/paintsweepgradient)
+The angle in [radians](https://en.wikipedia.org/wiki/Radian) at which stop 0.0 of the gradient is placed. Defaults to 0.0.
 
 
-#### `PaintSweepGradient`
+
+More information:
+
+* [Sweep gradient](https://api.flutter.dev/flutter/dart-ui/Gradient/Gradient.sweep.html) in Flutter documentation.
+
+#### Usage example
 
 <img src="/img/docs/controls/canvas/paint-sweep-gradient.png" className="screenshot-20" />
 
@@ -65,18 +60,6 @@ cv.Path(
     ),
 )
 ```
-
-`PaintSweepGradient` class has the following properties:
-
-* `center` - The center of the gradient.
-* `colors`, `stops`, `tile_mode`, `rotation` - see [Linear gradient](#paintlineargradient) for description of these properties.
-* `start_angle` - The angle in radians at which stop 0.0 of the gradient is placed. Defaults to 0.0.
-* `end_angle` - The angle in radians at which stop 1.0 of the gradient is placed. Defaults to math.pi * 2.
-* `rotation` - gradient rotation in radians.
-
-More information:
-
-* [Sweep gradient](https://api.flutter.dev/flutter/dart-ui/Gradient/Gradient.sweep.html) in Flutter documentation.
 
 ### `stroke_cap`
 

@@ -7,5 +7,5 @@ import TabItem from '@theme/TabItem';
 
 `BoxShape` enum has the following values:
 
-* `RECTANGLE`
-* `CIRCLE`
+### `RECTANGLE`
+### `CIRCLE`

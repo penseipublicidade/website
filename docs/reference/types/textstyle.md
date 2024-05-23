@@ -67,6 +67,7 @@ The value of this property is the instance of [`Paint`](/docs/reference/types/pa
 ### `height`
 
 The height of this text span, as a multiple of the font size.
+
 See complete explanation [here](https://api.flutter.dev/flutter/painting/TextStyle/height.html).
 
 ### `italic`
@@ -87,4 +88,4 @@ The size of glyphs (in logical pixels) to use when painting the text. Default is
 
 ### `weight`
 
-Property value is [`FontWeight`](/docs/reference/types/fontweight) enum. Default is `NORMAL`.
+Property value is [`FontWeight`](/docs/reference/types/fontweight) enum. Default is `FontWeight.NORMAL`.
