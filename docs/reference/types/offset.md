@@ -6,11 +6,11 @@ sidebar_label: Offset
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-`Offset` has the following values:
+`Offset` has the following properties:
 
 ### `x`
 
-The horizontal offset.
+The horizontal offset. 
 
 ### `y`
 

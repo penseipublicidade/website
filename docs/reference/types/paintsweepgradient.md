@@ -9,31 +9,38 @@ import TabItem from '@theme/TabItem';
 
 ### `center`
 
-The center of the gradient.
+An instance of [`Offset`](/docs/reference/types/offset) class. The center of the gradient.
 
 ### `colors`
+
+The [`colors`](/docs/reference/colors) the gradient should obtain at each of the stops. This list must contain at least two colors.
+
+If `stops` is provided, this list must have the same length as `stops`.
 
 ### `end_angle`
 
 The angle in radians at which stop 1.0 of the gradient is placed. Defaults to math.pi * 2.
 
-### `stops`
-
-### `tile_mode`
-
 ### `rotation`
 
-Gradient rotation in radians.
+The rotation of the gradient in [radians](https://en.wikipedia.org/wiki/Radian), around the center-point of its bounding box.
 
 ### `start_angle`
 
 The angle in [radians](https://en.wikipedia.org/wiki/Radian) at which stop 0.0 of the gradient is placed. Defaults to 0.0.
 
+### `stops`
+
+A list of values from `0.0` to `1.0` that denote fractions along the gradient. 
+
+If provided, this list must have the same length as `colors`. If the first value is not `0.0`, then a stop with position `0.0` and a color equal to the first color in `colors` is implied. If the last value is not `1.0`, then a stop with position `1.0` and a color equal to the last color in `colors` is implied.
+
+### `tile_mode`
+
+How this gradient should tile the plane beyond in the region before `begin` and after `end`. The value is of type [`GradientTileMode`](/docs/reference/types/gradienttilemode).
 
 
-More information:
-
-* [Sweep gradient](https://api.flutter.dev/flutter/dart-ui/Gradient/Gradient.sweep.html) in Flutter documentation.
+More information on Sweep gradient [here](https://api.flutter.dev/flutter/dart-ui/Gradient/Gradient.sweep.html).
 
 #### Usage example
 
@@ -79,11 +86,7 @@ This applies to paths drawn when style is set to `PaintingStyle.STROKE`, It does
 
 Defaults to `StrokeJoin.MITER`, i.e. sharp corners.
 
-The value is an instance of `ft.StrokeJoin` enum:
-
-* `MITER` (default) - Joins between line segments form sharp corners.
-* `ROUND` - Joins between line segments are semi-circular.
-* `BEVEL` - Joins between line segments connect the corners of the butt ends of the line segments to give a beveled appearance.
+Value is of type [`StrokeJoin`](/docs/reference/types/strokejoin).
 
 See [StrokeJoin enum](https://api.flutter.dev/flutter/dart-ui/StrokeJoin.html) in Flutter documentation for more details.
 
