@@ -392,6 +392,7 @@ module.exports = {
           ],
         },
         "reference/environment-variables",
+        "reference/icons",
         {
           type: "category",
           label: "Types",
