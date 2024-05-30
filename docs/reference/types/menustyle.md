@@ -7,7 +7,9 @@ import TabItem from '@theme/TabItem';
 
 `MenuStyle` allows controlling the menu's visual aspects, such as shape, background and shadow colors, content padding, border width and radius.
 
-Each individual style attribute could be configured for all or particular [Material states](/docs/reference/types/materialstate) of a menu, such as `HOVERED`, `FOCUSED`, `DISABLED` and others. 
+Each individual style attribute could be configured for all or
+particular [Material states](/docs/reference/types/controlstate) of a menu, such as `HOVERED`, `FOCUSED`, `DISABLED` and
+others.
 
 `MenuStyle` class has the following properties:
 
@@ -47,7 +49,8 @@ The surface tint color of the menu's Material.
 
 You can configure a different shape, background color for a `HOVERED` state and configure fallback values for all other states.
 
-To configure style attribute for all [Material states](/docs/reference/types/materialstate), set its value to a literal (or class instance). 
+To configure style attribute for all [Material states](/docs/reference/types/controlstate), set its value to a literal (
+or class instance).
 
 For example, if you set `bgcolor` property to a literal the value will be applied to all menu states:
 
@@ -62,9 +65,9 @@ For example, to configure different background colors for `HOVERED` and `FOCUSED
 ```python
 ft.MenuStyle(
     bgcolor={
-        ft.MaterialState.HOVERED: ft.colors.WHITE,
-        ft.MaterialState.FOCUSED: ft.colors.BLUE,
-        ft.MaterialState.DEFAULT: ft.colors.BLACK,
+        ft.ControlState.HOVERED: ft.colors.WHITE,
+        ft.ControlState.FOCUSED: ft.colors.BLUE,
+        ft.ControlState.DEFAULT: ft.colors.BLACK,
     }
 )
 ```

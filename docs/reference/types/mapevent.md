@@ -11,9 +11,17 @@ import TabItem from '@theme/TabItem';
 
 The center of the map at the event, of type [`MapLatitudeLongitude`](/docs/reference/types/maplatitudelongitude).
 
+### `max_zoom`
+
+The maximum allowed zoom level.
+
+### `min_zoom`
+
+The minimum allowed zoom level.
+
 ### `rotation`
 
-The rotation value at the event.
+The rotation of the camera in degrees.
 
 ### `source`
 
@@ -21,4 +29,4 @@ The source of the event, of type [`MapEventSource`](/docs/reference/types/mapeve
 
 ### `zoom`
 
-The zoom level at the event.
+The zoom level of the camera.

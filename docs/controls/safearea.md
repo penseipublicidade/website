@@ -49,7 +49,9 @@ ft.app(main)
 
 ### `bottom`
 
-Whether to avoid system intrusions on the bottom side of the screen. Default is `True`.
+Whether to avoid system intrusions on the bottom side of the screen.
+
+Defaults to `True`.
 
 ### `content`
 
@@ -57,7 +59,9 @@ A `Control` to display inside safe area.
 
 ### `left`
 
-Whether to avoid system intrusions on the left. Default is `True`.
+Whether to avoid system intrusions on the left.
+
+Defaults to `True`.
 
 ### `maintain_bottom_view_padding`
 
@@ -73,9 +77,13 @@ The greater of the minimum insets and the media padding will be applied.
 
 ### `right`
 
-Whether to avoid system intrusions on the right. Default is `True`.
+Whether to avoid system intrusions on the right.
+
+Defaults to `True`.
 
 ### `top`
 
-Whether to avoid system intrusions at the top of the screen, typically the system status bar. Default is `True`.
+Whether to avoid system intrusions at the top of the screen, typically the system status bar.
+
+Defaults to `True`.
 

@@ -7,7 +7,9 @@ Below is the list of useful environment variables and their default values:
 
 #### `FLET_ASSETS_DIR`
 
-Absolute path to app "assets" directory. Default is `assets`.
+Absolute path to app "assets" directory.
+
+Defaults to `assets`.
 
 #### `FLET_FORCE_WEB_SERVER`
 
@@ -15,15 +17,21 @@ Set to `true` to force running app as a web app. Automatically set on headless L
 
 #### `FLET_OAUTH_CALLBACK_HANDLER_ENDPOINT`
 
-Custom path for OAuth handler. Default is `/oauth_callback`.
+Custom path for OAuth handler.
+
+Defaults to `/oauth_callback`.
 
 #### `FLET_OAUTH_STATE_TIMEOUT`
 
-Maximum allowed time (in seconds) to complete OAuth web flow. Default is `600`.
+Maximum allowed time (in seconds) to complete OAuth web flow.
+
+Defaults to `600`.
 
 #### `FLET_MAX_UPLOAD_SIZE`
 
-Maximum allowed size (in bytes) of uploaded files. Default is unlimited.
+Maximum allowed size (in bytes) of uploaded files.
+
+Default is unlimited.
 
 #### `FLET_SECRET_KEY`
 
@@ -31,7 +39,9 @@ A secret key to sign temporary upload URLs.
 
 #### `FLET_SERVER_IP`
 
-IP address to listen web app on, e.g. `127.0.0.1`. Default is `0.0.0.0` - bound to all server IPs.
+IP address to listen web app on, e.g. `127.0.0.1`.
+
+Defaults to `0.0.0.0` - bound to all server IPs.
 
 #### `FLET_SERVER_PORT`
 

@@ -9,11 +9,13 @@ import TabItem from '@theme/TabItem';
 
 ### `blur_radius`
 
-The standard deviation of the Gaussian to convolve with the shadow's shape. Defaults to `0.0.`.
+The standard deviation of the Gaussian to convolve with the shadow's shape.
+
+Defaults to `0.0.`.
 
 ### `blur_style`
 
-The value is [`ShadowBlurStyle`](/docs/reference/types/shadowblurstyle) enum. Defaults to `ShadowBlurStyle.NORMAL`.
+Value is of type [`ShadowBlurStyle`](/docs/reference/types/shadowblurstyle) and defaults to `ShadowBlurStyle.NORMAL`.
 
 ### `color`
 
@@ -21,11 +23,17 @@ The value is [`ShadowBlurStyle`](/docs/reference/types/shadowblurstyle) enum. De
 
 ### `offset`
 
-An instance of `Offset` class - the displacement of the shadow from the casting element. Positive x/y offsets will shift the shadow to the right and down, while negative offsets shift the shadow to the left and up. The offsets are relative to the position of the element that is casting it. Default is `ft.Offset(0,0)`.
+An instance of `Offset` class - the displacement of the shadow from the casting element. Positive x/y offsets will shift
+the shadow to the right and down, while negative offsets shift the shadow to the left and up. The offsets are relative
+to the position of the element that is casting it.
+
+Value is of type [`Offset`](/docs/reference/types/offset) and defaults to `Offset(0,0)`.
 
 ### `spread_radius`
 
-The amount the box should be inflated prior to applying the blur. Defaults to `0.0.`.
+The amount the box should be inflated prior to applying the blur.
+
+Defaults to `0.0.`.
 
 ## Usage example
 

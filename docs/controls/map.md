@@ -5,6 +5,15 @@ sidebar_label: Map
 
 Used to display a map with various layers.
 
+:::info Packaging
+To build your Flet app that uses `Map` control add `--include-packages flet_map` to `flet build` command, for example:
+
+```
+flet build apk --include-packages flet_map
+```
+
+:::
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -181,7 +190,7 @@ ft.app(target=main)
 
 A `MapConfiguration` object that defines the initial state of the map and its interaction configuration.
 
-Value is an instance of [`MapConfiguration`](/docs/controls/mapconfiguration).
+Value is of type [`MapConfiguration`](/docs/controls/mapconfiguration).
 
 ### `layers`
 

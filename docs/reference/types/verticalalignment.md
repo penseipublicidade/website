@@ -14,6 +14,7 @@ Aligns the text vertically in the center of the text field
 ### `END`
 
 Aligns the text vertically at the bottommost location of the text field
+
 ### `START`
 
 Aligns the text vertically at the topmost location of the text field

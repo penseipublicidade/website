@@ -28,7 +28,9 @@ The border color of this polyline.
 
 ### `border_stroke_width`
 
-The border stroke width of this polyline. Defaults to `0.0` - disabled.
+The border stroke width of this polyline.
+
+Defaults to `0.0` - disabled.
 
 ### `color`
 
@@ -40,11 +42,9 @@ A list of stops for gradient colors along the polyline.
 
 ### `coordinates`
 
-The list of coordinates (latitude and longitude) defining the polyline. Value is of type [`MapLatitudeLongitude`](/docs/reference/types/maplatitudelongitude).
+The coordinates (latitude and longitude) defining the polyline.
 
-### `dotted`
-
-Whether the polyline should be dotted. Defaults to `False`.
+Value is a list with items of type [`MapLatitudeLongitude`](/docs/reference/types/maplatitudelongitude).
 
 ### `gradient_colors`
 
@@ -52,16 +52,28 @@ A list of colors in case a gradient should get used.
 
 ### `stroke_cap`
 
-The stroke cap style of the polyline. Value is of type [`StrokeCap`](/docs/reference/types/strokecap).
+The stroke cap style of the polyline.
+
+Value is of type [`StrokeCap`](/docs/reference/types/strokecap) and defaults to `StrokeCap.ROUND`.
 
 ### `stroke_join`
 
-The stroke join style of the polyline. Value is of type [`StrokeJoin`](/docs/reference/types/strokejoin).
+The stroke join style of the polyline.
+
+Value is of type [`StrokeJoin`](/docs/reference/types/strokejoin) and defaults to `StrokeJoin.ROUND`.
 
 ### `stroke_width`
 
 The stroke width of this polyline.
 
+### `stroke_pattern`
+
+The stroke pattern of this polyline.
+
+Value is of type [`StrokePattern`](/docs/reference/types/mapstrokepattern) and defaults to `SolidStrokePattern()`.
+
 ### `use_stroke_width_in_meter`
 
-A boolean value to indicate if the stroke width is in meters or pixels. Defaults to `False` - pixels.
+A boolean value to indicate if the stroke width is in meters or pixels.
+
+Defaults to `False` - pixels.

@@ -203,7 +203,9 @@ The default value is `False`.
 
 ### `autocorrect`
 
-Whether to enable autocorrection. Default is `True`.
+Whether to enable autocorrection.
+
+Defaults to `True`.
 
 ### `autofill_hints`
 
@@ -221,7 +223,9 @@ TextField background [color](/docs/reference/colors). Will not be visible if `fi
 
 ### `border`
 
-Border around input. The value is [`InputBorder`](/docs/reference/types/inputborder) enum. The default is `OUTLINE`.
+Border around input.
+
+Value is of type [`InputBorder`](/docs/reference/types/inputborder) and defaults to `InputBorder.OUTLINE`.
 
 ### `border_color`
 
@@ -229,11 +233,13 @@ Border [color](/docs/reference/colors). Could be `transparent` to hide the borde
 
 ### `border_radius`
 
-Border radius is an instance of [`border_radius.BorderRadius`](/docs/reference/types/borderradius) class.
+Border radius is an instance of [`BorderRadius`](/docs/reference/types/borderradius) class.
 
 ### `border_width`
 
-The width of the border in virtual pixels. Default is `1`. Set to `0` to completely remove border.
+The width of the border in virtual pixels. Set to `0` to completely remove the border.
+
+Defaults to `1`.
 
 ### `can_reveal_password`
 
@@ -245,9 +251,8 @@ The icon is displayed in the same location as `suffix` and in case both `can_rev
 
 Enables automatic on-the-fly capitalization of entered text.
 
-Property value is [`TextCapitalization`](/docs/reference/types/textcapitalization) enum.
-
-Default is `NONE`.
+Value is of type [`TextCapitalization`](/docs/reference/types/textcapitalization) and defaults
+to `TextCapitalization.NONE`.
 
 ### `color`
 
@@ -293,7 +298,10 @@ Whether the TextField is part of a dense form (ie, uses less vertical space).
 
 Whether to show input suggestions as the user types.
 
-This flag only affects Android. On iOS, suggestions are tied directly to `autocorrect`, so that suggestions are only shown when `autocorrect` is `True`. On Android autocorrection and suggestion are controlled separately. Default is `True`.
+This flag only affects Android. On iOS, suggestions are tied directly to `autocorrect`, so that suggestions are only
+shown when `autocorrect` is `True`. On Android autocorrection and suggestion are controlled separately.
+
+Defaults to `True`.
 
 ### `error_style`
 
@@ -368,9 +376,8 @@ Similar to the `on_change` callback, the input filters are not applied when the 
 
 ### `keyboard_type`
 
-The type of keyboard to use for editing the text. The property value is [`KeyboardType`](/docs/reference/types/keyboardtype) enum.
-
-The default is `TEXT`.
+The type of keyboard to use for editing the text. The property value
+is [`KeyboardType`](/docs/reference/types/keyboardtype) and defaults to `KeyboardType.TEXT`.
 
 ### `label`
 
@@ -400,7 +407,7 @@ The minimum number of lines to occupy when the content spans fewer lines.
 
 This affects the height of the field itself and does not limit the number of lines that can be entered into the field.
 
-Default is `1`.
+Defaults to `1`.
 
 ### `multiline`
 
@@ -408,7 +415,9 @@ Default is `1`.
 
 ### `password`
 
-Whether to hide the text being edited. Default is `False`.
+Whether to hide the text being edited.
+
+Defaults to `False`.
 
 ### `prefix`
 
@@ -442,7 +451,9 @@ Defaults to `False`.
 
 ### `rtl`
 
-`True` to set text direction to right-to-left. Default is `False`.
+`True` to set text direction to right-to-left.
+
+Defaults to `False`.
 
 ### `selection_color`
 
@@ -460,13 +471,19 @@ Whether the field's cursor is to be shown. Defaults to `True`.
 
 Whether to allow the platform to automatically format dashes.
 
-This flag only affects iOS versions 11 and above. As an example of what this does, two consecutive hyphen characters will be automatically replaced with one en dash, and three consecutive hyphens will become one em dash. Default is `True`.
+This flag only affects iOS versions 11 and above. As an example of what this does, two consecutive hyphen characters
+will be automatically replaced with one en dash, and three consecutive hyphens will become one em dash.
+
+Defaults to `True`.
 
 ### `smart_quotes_type`
 
 Whether to allow the platform to automatically format quotes.
 
-This flag only affects iOS. As an example of what this does, a standard vertical double quote character will be automatically replaced by a left or right double quote depending on its position in a word. Default is `True`.
+This flag only affects iOS. As an example of what this does, a standard vertical double quote character will be
+automatically replaced by a left or right double quote depending on its position in a word.
+
+Defaults to `True`.
 
 ### `suffix`
 
@@ -494,7 +511,7 @@ Optional text `suffix` to place on the line after the input.
 
 How the text should be aligned horizontally.
 
-Property value is [`TextAlign`](/docs/reference/types/textalign) enum. Default is `LEFT`.
+Value is of type [`TextAlign`](/docs/reference/types/textalign) and defaults to `TextAlign.LEFT`.
 
 ### `text_size`
 
@@ -508,7 +525,7 @@ The [`TextStyle`](/docs/reference/types/textstyle) to use for the text being edi
 
 Defines how the text should be aligned vertically. It's value can either be a number ranging from `-1.0` (topmost location) to `1.0` (bottommost location) or of type [`VerticalAlignment`](/docs/reference/types/verticalalignment) enum.
 
-The default is `CENTER`. 
+Defaults to `CENTER`.
 
 ### `value`
 

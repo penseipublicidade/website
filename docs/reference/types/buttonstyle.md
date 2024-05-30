@@ -7,7 +7,9 @@ import TabItem from '@theme/TabItem';
 
 Allows controlling all visual aspects of a button, such as shape, foreground, background and shadow colors, content padding, border width and radius.
 
-Each individual style attribute could be configured for all or particular [`MaterialState`](/docs/reference/types/materialstate) of a button, such as `HOVERED`, `FOCUSED`, `DISABLED` and others. 
+Each individual style attribute could be configured for all or
+particular [`ControlState`](/docs/reference/types/controlstate) of a button, such as `HOVERED`, `FOCUSED`, `DISABLED`
+and others.
 
 `ButtonStyle` class has the following properties:
 
@@ -68,9 +70,9 @@ To configure style attribute for specific Material states set its value to a dic
 ```python
 ButtonStyle(
     color={
-        ft.MaterialState.HOVERED: ft.colors.WHITE,
-        ft.MaterialState.FOCUSED: ft.colors.BLUE,
-        ft.MaterialState.DEFAULT: ft.colors.BLACK,
+        ft.ControlState.HOVERED: ft.colors.WHITE,
+        ft.ControlState.FOCUSED: ft.colors.BLUE,
+        ft.ControlState.DEFAULT: ft.colors.BLACK,
     }
 )
 ```
@@ -136,22 +138,22 @@ def main(page: ft.Page):
             "Styled button 1",
             style=ft.ButtonStyle(
                 color={
-                    ft.MaterialState.HOVERED: ft.colors.WHITE,
-                    ft.MaterialState.FOCUSED: ft.colors.BLUE,
-                    ft.MaterialState.DEFAULT: ft.colors.BLACK,
+                    ft.ControlState.HOVERED: ft.colors.WHITE,
+                    ft.ControlState.FOCUSED: ft.colors.BLUE,
+                    ft.ControlState.DEFAULT: ft.colors.BLACK,
                 },
-                bgcolor={ft.MaterialState.FOCUSED: ft.colors.PINK_200, "": ft.colors.YELLOW},
-                padding={ft.MaterialState.HOVERED: 20},
+                bgcolor={ft.ControlState.FOCUSED: ft.colors.PINK_200, "": ft.colors.YELLOW},
+                padding={ft.ControlState.HOVERED: 20},
                 overlay_color=ft.colors.TRANSPARENT,
                 elevation={"pressed": 0, "": 1},
                 animation_duration=500,
                 side={
-                    ft.MaterialState.DEFAULT: ft.BorderSide(1, ft.colors.BLUE),
-                    ft.MaterialState.HOVERED: ft.BorderSide(2, ft.colors.BLUE),
+                    ft.ControlState.DEFAULT: ft.BorderSide(1, ft.colors.BLUE),
+                    ft.ControlState.HOVERED: ft.BorderSide(2, ft.colors.BLUE),
                 },
                 shape={
-                    ft.MaterialState.HOVERED: ft.RoundedRectangleBorder(radius=20),
-                    ft.MaterialState.DEFAULT: ft.RoundedRectangleBorder(radius=2),
+                    ft.ControlState.HOVERED: ft.RoundedRectangleBorder(radius=20),
+                    ft.ControlState.DEFAULT: ft.RoundedRectangleBorder(radius=2),
                 },
             ),
         )

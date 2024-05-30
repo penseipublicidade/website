@@ -11,10 +11,6 @@ import TabItem from '@theme/TabItem';
 
 A boolean value to enable multi-finger gesture race.
 
-### `enable_scroll_wheel`
-
-A boolean value to enable scroll wheel.
-
 ### `flags`
 
 The interactive flags, of type [`MapInteractiveFlag`](/docs/reference/types/mapinteractiveflag).

@@ -8,10 +8,6 @@ import TabItem from '@theme/TabItem';
 
 ## Properties
 
-### `apply_pointer_translucency_to_layers`
-
-A boolean value to apply pointer translucency to layers.
-
 ### `bgcolor`
 
 The background color.
