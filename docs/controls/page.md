@@ -702,25 +702,47 @@ Returns `True` if it is possible to verify that there is a handler available. A 
 * On recent versions of Android and iOS, this will always return `False` unless the application has been configuration to allow querying the system for launch support.
 * On web, this will always return `False` except for a few specific schemes that are always assumed to be supported (such as http(s)), as web pages are never allowed to query installed applications.
 
-### `close_banner()`
+### `close(control)`
+
+Closes the provided control.
+
+It sets the `control.open=False` and calls `update()`.
+
+### ~~`close_banner()`~~
 
 Closes active banner.
 
-### `close_bottom_sheet()`
+**Deprecated in v0.23.0 and will be removed in v0.26.0. Use [`page.close(banner)`](#open) instead.**
+
+### ~~`close_bottom_sheet()`~~
 
 Closes active bottom sheet.
 
-### `close_dialog()`
+**Deprecated in v0.23.0 and will be removed in v0.26.0. Use [`page.close(bottom_sheet)`](#open) instead.**
+
+### ~~`close_dialog()`~~
 
 Closes active dialog.
 
-### `close_drawer()`
+**Deprecated in v0.23.0 and will be removed in v0.26.0. Use [`page.close(dialog)`](#open) instead.**
+
+### ~~`close_drawer()`~~
 
 Closes active drawer.
 
-### `close_end_drawer()`
+**Deprecated in v0.23.0 and will be removed in v0.26.0. Use [`page.close(drawer)`](#open) instead.**
+
+### ~~`close_end_drawer()`~~
 
 Closes active end drawer.
+
+**Deprecated in v0.23.0 and will be removed in v0.26.0. Use [`page.close(end_drawer)`](#open) instead.**
+
+### ~~`close_snack_bar()`~~
+
+Closes active end drawer.
+
+**Deprecated in v0.23.0 and will be removed in v0.26.0. Use [`page.close(snack_bar)`](#open) instead.**
 
 ### `close_in_app_web_view()`
 
@@ -787,6 +809,12 @@ Starts OAuth flow. See [Authentication](/docs/cookbook/authentication) guide for
 
 Clears current authentication context. See [Authentication](/docs/cookbook/authentication#signing-out) guide for more information and examples.
 
+### `open(control)`
+
+Opens the provided control.
+
+Adds this control to the [`page.overlay`](#overlay), sets the `control.open=True`, then calls `update()`.
+
 ### `remove(*controls)`
 
 Removes specific controls from `page.controls` list.
@@ -823,31 +851,41 @@ page.set_clipboard("This value comes from Flet app")
 </TabItem>
 </Tabs>
 
-### `show_banner(banner: Banner)`
+### ~~`show_banner(banner: Banner)`~~
 
 Displays the banner at the top of the page.
 
-### `show_bottom_sheet(bottom_sheet: BottomSheet)`
+**Deprecated in v0.23.0 and will be removed in v0.26.0. Use [`page.open(banner)`](#open) instead.**
+
+### ~~`show_bottom_sheet(bottom_sheet: BottomSheet)`~~
 
 Displays bottom sheet at the bottom of the page.
 
-### `show_dialog(dialog: AlertDialog)`
+**Deprecated in v0.23.0 and will be removed in v0.26.0. Use [`page.open(bottom_sheet)`](#open) instead.**
+
+### ~~`show_dialog(dialog: AlertDialog)`~~
 
 Displays dialog.
 
-### `show_drawer(drawer: NavigationDialog)`
+**Deprecated in v0.23.0 and will be removed in v0.26.0. Use [`page.open(dialog)`](#open) instead.**
+
+### ~~`show_drawer(drawer: NavigationDialog)`~~
 
 Displays [`drawer`](#drawer).
 
-### `show_end_drawer(drawer: NavigationDialog)`
+**Deprecated in v0.23.0 and will be removed in v0.26.0. Use [`page.open(drawer)`](#open) instead.**
+
+### ~~`show_end_drawer(drawer: NavigationDialog)`~~
 
 Displays [`end_drawer`](#end_drawer).
 
-### `show_snack_bar(snack_bar: SnackBar)`
+**Deprecated in v0.23.0 and will be removed in v0.26.0. Use [`page.open(end_drawer)`](#open) instead.**
 
-Displays SnackBar at the bottom of the page.
+### ~~`show_snack_bar(snack_bar: SnackBar)`~~
 
-`snack_bar` - A [`SnackBar`](/docs/controls/snackbar) control to display at the bottom of the Page.
+Displays [`SnackBar`](/docs/controls/snackbar) at the bottom of the page.
+
+**Deprecated in v0.23.0 and will be removed in v0.26.0. Use [`page.open(snack_bar)`](#open) instead.**
 
 ### `window_center()`
 

@@ -75,7 +75,7 @@ This minimum padding to apply.
 
 The greater of the minimum insets and the media padding will be applied.
 
-Deprecated (renamed) since version 0.23.0 and will be removed in version 1.0. Use `minimum_padding` instead.
+*Deprecated (renamed) since version 0.23.0 and will be removed in version 1.0. Use `minimum_padding` instead.*
 
 ### `minimum_padding`
 
