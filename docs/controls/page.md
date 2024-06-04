@@ -20,9 +20,11 @@ import TabItem from '@theme/TabItem';
 
 An [`AppBar`](/docs/controls/appbar) control to display at the top of the Page.
 
-### `banner`
+### ~~`banner`~~
 
 A [`Banner`](/docs/controls/banner) control to display at the top of the Page.
+
+**Deprecated in v0.23.0 and will be removed in v0.26.0. Use [`page.overlay.append(banner)`](#overlay) instead.**
 
 ### `bgcolor`
 
@@ -34,9 +36,11 @@ A color value could be a hex value in `#ARGB` format (e.g. `#FFCC0000`), `#RGB` 
 
 [`BottomAppBar`](/docs/controls/bottomappbar) control to display at the bottom of the Page. If both [`bottom_appbar`](#bottom_appbar) and [`navigation_bar`](#navigation_bar) properties are provided, `NavigationBar` will be displayed.
 
-### `bottom_sheet`
+### ~~`bottom_sheet`~~
 
 [`BottomSheet`](/docs/controls/bottomsheet) control to display.
+
+**Deprecated in v0.23.0 and will be removed in v0.26.0. Use [`page.overlay.append(bottom_sheet)`](#overlay) instead.**
 
 ### `client_ip`
 
@@ -102,9 +106,11 @@ Value is an instance of the `Theme()` class - more information in the [theming](
 
 Reserved for future use.
 
-### `dialog`
+### ~~`dialog`~~
 
 An [`AlertDialog`](/docs/controls/alertdialog) control to display.
+
+**Deprecated in v0.23.0 and will be removed in v0.26.0. Use [`page.overlay.append(dialog)`](#overlay) instead.**
 
 ### `drawer`
 
@@ -442,11 +448,17 @@ A simple KV storage for session data.
 
 A unique ID of user's session. This property is read-only.
 
+### ~~`snack_bar`~~
+
+A [`SnackBar`](/docs/controls/snackbar) control to display.
+
+**Deprecated in v0.23.0 and will be removed in v0.26.0. Use [`page.overlay.append(snack_bar)`](#overlay) instead.**
+
 ### `spacing`
 
 Vertical spacing between controls on the Page. Default value is 10 virtual pixels. Spacing is applied only when `alignment` is set to `start`, `end` or `center`.
 
-### `splash`
+### ~~`splash`~~
 
 A `Control` that will be displayed on top of Page contents. [`ProgressBar`](/docs/controls/progressbar) or [`ProgressRing`](/docs/controls/progressring) could be used as an indicator for some lengthy operation, for example:
 
@@ -475,6 +487,8 @@ ft.app(target=main)
 
 </TabItem>
 </Tabs>
+
+**Deprecated in v0.23.0 and will be removed in v0.26.0. Use [`page.overlay.append(splash)`](#overlay) instead.**
 
 ### `show_semantics_debugger`
 
