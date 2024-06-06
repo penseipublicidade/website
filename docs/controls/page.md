@@ -67,17 +67,7 @@ page.update()
 </TabItem>
 </Tabs>
 
-or to get the same result as above using `page.add()` shortcut method:
-
-<Tabs groupId="language">
-  <TabItem value="python" label="Python" default>
-
-```python
-page.add(ft.Text("Hello!"))
-```
-
-</TabItem>
-</Tabs>
+or to get the same result as above using [`page.add()`](#add) method
 
 To remove the top most control on the page:
 
@@ -704,6 +694,14 @@ Note `view=ft.AppView.FLET_APP_HIDDEN` which hides app window on start.
 
 ## Methods
 
+### `add(*controls)`
+
+Adds controls to page
+
+```python
+page.add(ft.Text("Hello!"), ft.FilledButton("Button"))
+```
+
 ### `can_launch_url(url)`
 
 Checks whether the specified URL can be handled by some app installed on the device.
@@ -861,6 +859,7 @@ page.set_clipboard("This value comes from Flet app")
 
 </TabItem>
 </Tabs>
+
 
 ### ~~`show_banner(banner: Banner)`~~
 
@@ -1133,3 +1132,14 @@ Fires when an application's native OS window changes its state: position, size, 
 * `moved` (macOS and Windows only)
 * `enterFullScreen`
 * `leaveFullScreen`
+
+## Magic methods
+
+### `__contains__(item: Control)`
+
+Returns `bool` value. If `True` -> `item in page`, if `False` -> `item not in page`
+
+```python
+page.add(ft.Text('Hi'))
+print(ft.Text('Hi') in page) # True
+```

@@ -179,6 +179,16 @@ A list of `Control`s to display after the text input field when the search view 
 
 Defaults to a close button which closes/pops the search view.
 
+## Methods
+
+### `close_view(text)`
+
+Closes the search view. The `text` parameter (defaults to an empty string) is the text to be shown in the search bar after the search view is closed.
+
+### `open_view()`
+
+Opens the search view.
+
 ## Events
 
 ### `on_change`
@@ -192,13 +202,3 @@ Fires when user presses ENTER while focus is on SearchBar.
 ### `on_tap`
 
 Fires when the search bar is tapped.
-
-## Methods
-
-### `close_view(text)`
-
-Closes the search view. The `text` parameter (defaults to an empty string) is the text to be shown in the search bar after the search view is closed.
-
-### `open_view()`
-
-Opens the search view.
