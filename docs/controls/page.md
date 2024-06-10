@@ -1135,9 +1135,9 @@ Fires when an application's native OS window changes its state: position, size, 
 
 ## Magic methods
 
-### `__contains__(item: Control)`
+### `__contains__(control)`
 
-Returns `bool` value. If `True` -> `item in page`, if `False` -> `item not in page`
+Checks if a control is present on the page, for example:
 
 ```python
 page.add(ft.Text('Hi'))

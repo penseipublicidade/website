@@ -8,8 +8,8 @@ import TabItem from '@theme/TabItem';
 
 `AnimatedSwitcherTransition` enum has the following values:
 
-### `CALE`
-
 ### `FADE`
 
 ### `ROTATION`
+
+### `SCALE`

@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 ## Examples
 
-[Live example](https://flet-controls-gallery.fly.dev/imput/autocomplete)
+[Live example](https://flet-controls-gallery.fly.dev/input/autocomplete)
 
 ### Basic example
 

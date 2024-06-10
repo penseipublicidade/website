@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 ## Examples
 
-[Live example](https://flet-controls-gallery.fly.dev/imput/autofillgroup)
+[Live example](https://flet-controls-gallery.fly.dev/input/autofillgroup)
 
 ### Basic example
 

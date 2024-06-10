@@ -156,7 +156,7 @@ Defaults to `20.0`.
 
 ### `tristate`
 
-If `True` the checkbox's value can be `True`, `False`, or `None`.
+If `True` the checkboxes value can be `True`, `False`, or `None`.
 
 Checkbox displays a dash when its value is `None`.
 

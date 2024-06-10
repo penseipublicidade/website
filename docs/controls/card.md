@@ -92,13 +92,14 @@ The [color](/docs/reference/colors) to paint the shadow below the card.
 
 The shape of the card.
 
-The value is an instance of [`OutlinedBorder`](/docs/reference/types/outlinedborder) class.
-
-The default shape is a `RoundedRectangleBorder` with `radius=4.0`.
+Value is of type [`OutlinedBorder`](/docs/reference/types/outlinedborder) and defaults
+to `RoundedRectangleBorder(radius=4.0)`.
 
 ### `show_border_on_foreground`
 
-Set to `True` (default) if the shape of the border should be painted in front of the `content`, or to `False` if it should instead be painted behind.
+Whether the shape of the border should be painted in front of the `content` or behind.
+
+Defaults to `True`.
 
 ### `surface_tint_color`
 
@@ -110,8 +111,6 @@ Defaults to `None`.
 
 ### `variant`
 
-Defines the card variant to be used. Value is of `CardVariant` enum:
+Defines the card variant to be used.
 
-* `ELEVATED` - the default variant
-* `FILLED` - the filled variant
-* `OUTLINED` - the outlined variant
+Value is of type [`CardVariant`](/docs/reference/types/cardvariant) and defaults to `CardVariant.ELEVATED`.

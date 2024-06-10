@@ -318,7 +318,7 @@ ft.app(main)
 
 ### `url`
 
-The URL to open when the container is clicked. If registered, `on_click` event is fired after that.
+The URL to open when the container is clicked. If provided, `on_click` event is fired after that.
 
 ### `url_target`
 
@@ -361,7 +361,7 @@ Fires when the container is long-pressed.
 
 Fires when a user clicks the container with or without a long press.
 
-Event object `e` is of type [`ContainerTapEvent`](/docs/reference/types/containertapevent).
+Event handler argument is of type [`ContainerTapEvent`](/docs/reference/types/containertapevent).
 
 :::info
 If `ink` is `True`, `e` will be plain `ControlEvent` with empty `data` instead of `ContainerTapEvent`.
