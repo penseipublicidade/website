@@ -1,52 +1,77 @@
----
-title: Create a new Flet app
----
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+.\venv\Scripts\activate  # Windows
+pip install flask pandas sqlalchemy fpdf matplotlib
+from flask import Flask, request, jsonify, render_template
+from flask_sqlalchemy import SQLAlchemy
 
-To create a new "minimal" Flet app run the following command:
+app = Flask(__frequencia superaçao__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///frequencia.db'
+db = SQLAlchemy(app)
 
-```
-flet create <project-name>
-```
+class Aluno(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    nome = db.Column(db.String(80), nullable=False)
+    faltas = db.Column(db.Integer, default=0)
+    presencas = db.Column(db.Integer, default=0)
 
-for example:
+db.create_all()
 
-```
-flet create my_flet_app
-```
+@app.route('/')
+def index():
+    return render_template('index.html')
 
-`<project-name>` will be used as a name of output directory.
+@app.route('/registro', methods=['POST'])
+def registro():
+    data = request.json
+    aluno = Aluno.query.get(data['id'])
+    if data['presenca']:
+        aluno.presencas += 1
+    else:
+        aluno.faltas += 1
+    db.session.commit()
+    return jsonify({'message': 'Registro atualizado'})
 
-Flet will create `<project-name>` directory with the following `main.py`:
+@app.route('/relatorio/<int:id>', methods=['GET'])
+def relatorio(id):
+    aluno = Aluno.query.get(id)
+    if aluno:
+        total = aluno.faltas + aluno.presencas
+        percentual_presenca = (aluno.presencas / total) * 100
+        percentual_falta = (aluno.faltas / total) * 100
 
-```python
-import flet as ft
+        # Geração de PDF (usando FPDF)
+        from fpdf import FPDF
 
-def main(page: ft.Page):
-    page.add(ft.SafeArea(ft.Text("Hello, Flet!")))
+        class PDF(FPDF):
+            def header(self):
+                self.set_font('Arial', 'B', 12)
+                self.cell(0, 10, 'Relatorio de Frequencia', 0, 1, 'C')
 
-ft.app(main)
-```
+            def chapter_title(self, title):
+                self.set_font('Arial', 'B', 12)
+                self.cell(0, 10, title, 0, 1, 'L')
+                self.ln(10)
 
-:::note
-To create your Flet app in current directory, run the following command:
-```
-flet create .
-```
-:::
+            def chapter_body(self, body):
+                self.set_font('Arial', '', 12)
+                self.multi_cell(0, 10, body)
+                self.ln()
 
-Flet program has `main()` function where you would add UI elements ([controls](flet-controls)) to a page or a window. The application ends with a blocking `ft.app()` function which initializes Flet app and [runs](running-app) `main()`.
+        pdf = PDF()
+        pdf.add_page()
+        pdf.chapter_title(f'Relatorio de Frequencia - {aluno.nome}')
+        body = (f'Total de Presenças: {aluno.presencas}\n'
+                f'Total de Faltas: {aluno.faltas}\n'
+                f'Percentual de Presença: {percentual_presenca:.2f}%\n'
+                f'Percentual de Falta: {percentual_falta:.2f}%')
+        pdf.chapter_body(body)
 
-To create a new Flet app from "counter" template run the following command:
+        pdf_output = f'relatorio_{aluno.id}.pdf'
+        pdf.output(pdf_output)
 
-```
-flet create --template counter <project-name>
-```
+        return jsonify({'message': 'Relatório gerado', 'file': pdf_output})
+    return jsonify({'message': 'Aluno não encontrado'}), 404
 
-Or, to create Flet app from counter template in your current directory, run this command:
-```
-flet create --template counter .
-```
-
-You can find more information about `flet create` command [here](/docs/reference/cli/create).
-
-Now let's see Flet in action by [running the app](running-app)!
+if __name__ == '__main__':
+    app.run(debug=True)
